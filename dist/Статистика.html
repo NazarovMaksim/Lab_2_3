@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="css/main_page_2.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title></title>
+    <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <div class="centralBlock">
+    <div class="menuFlex">
+      <div class="heading">Студия звукозаписи VLAD|VOICE</div>
+      <div class="menuFlex">
+        <div class="menuItem"><a href="index.html">Главная страница</a></div>
+        <div class="menuItem"><a href="Статистика.html">Список наших клиентов</a></div>
+        <div class="menuItem"><a href="Page_03.html">Галерея</a></div>
+      </div>
+    </div>
+    <div class="content-2">
+      <div class="my-content">
+        <details open>
+          <summary class="text-002">Настройки показа</summary>
+          <div class="main-block">
+            <div class="block-01">
+              <div class="table"> 
+                <div class="title-1-1">
+                  <p>График:</p>
+                </div>
+                <div class="left-edge-1">
+                  <p class="title-1">Значение по оси OХ: </p>
+                  <div>
+                    <input id="inp2-1" type="radio" name="ox" value="жанр" checked>
+                    <p>Предпочитаемый микрофон</p>
+                  </div>
+                  <div>
+                    <input id="inp2-2" type="radio" name="ox" value="жанр">
+                    <p>Год рождения   </p>
+                  </div>
+                </div>
+                <div class="right-edge-1">
+                  <p class="title-1">Результат: </p>
+                  <div>
+                    <input id="in-1" type="radio" name="result" value="колво" checked>
+                    <p>Всего часов записи        </p>
+                  </div>
+                  <div>  
+                    <input id="in-2" type="radio" name="result" value="макс">
+                    <p>Всего потрачено             </p>
+                  </div>
+                </div>
+                <button id="butt-graf">Построить </button>
+              </div>
+            </div>
+            <div class="block-02">
+              <div class="table class_01"> 
+                <div class="title-1-1">
+                  <p>Фильтр:</p>
+                </div>
+                <div class="left-edge-1">
+                  <p>ФИО Клиента:</p>
+                  <p>Предпочитаемый микрофон:</p>
+                  <p>Год рождения:</p>
+                  <p>Всего потрачено (от):	</p>
+                  <p>Всего потрачено (до):	</p>
+                  <p>Всего часов записи (от):	</p>
+                  <p>Всего часов записи (до):</p>
+                </div>
+                <div class="right-edge-1">
+                  <p>
+                    <input id="name" type="text" placeholder="Введите название">
+                  </p>
+                  <p>
+                    <input id="name" type="text" placeholder="Введите название">
+                  </p>
+                  <p>
+                    <input id="name" type="text" placeholder="Введите год">
+                  </p>
+                  <p>
+                    <input id="name" type="text" placeholder="Введите число">
+                  </p>
+                  <p>
+                    <input id="name" type="text" placeholder="Введите число">
+                  </p>
+                  <p>
+                    <input id="name" type="text" placeholder="Введите число">
+                  </p>
+                  <p>
+                    <input id="name" type="text" placeholder="Введите число">
+                  </p>
+                </div>
+                <button id="butt-filter">Найти </button>
+              </div>
+            </div>
+            <div class="block-03">
+              <div class="table-2">
+                <div class="title-1-2">
+                  <p>Сортировка:</p>
+                </div>
+                <div class="left-edge-2">
+                  <p>Первый уровень</p>
+                  <p>Второй уровень </p>
+                  <p>Третий уровень</p>
+                </div>
+                <div class="center-edge-2" id="sort-opt"> 
+                  <p class="l1">
+                    <select>
+                      <option value="0">--- Нет ---</option>
+                      <option value="1">ФИО Клиента</option>
+                      <option value="2">Всего потрачено</option>
+                      <option value="3">Всего часов записи</option>
+                      <option value="4">Предпочитаемый микрофон</option>
+                      <option value="5">Год рождения</option>
+                    </select>
+                  </p>
+                  <p class="l2">
+                    <select>
+                      <option value="0">--- Нет ---</option>
+                      <option value="1">ФИО Клиента</option>
+                      <option value="2">Всего потрачено</option>
+                      <option value="3">Всего часов записи</option>
+                      <option value="4">Предпочитаемый микрофон</option>
+                      <option value="5">Год рождения</option>
+                    </select>
+                  </p>
+                  <p class="l3">
+                    <select>
+                      <option value="0">--- Нет ---</option>
+                      <option value="1">ФИО Клиента</option>
+                      <option value="2">Всего потрачено</option>
+                      <option value="3">Всего часов записи</option>
+                      <option value="4">Предпочитаемый микрофон</option>
+                      <option value="5">Год рождения</option>
+                    </select>
+                  </p>
+                </div>
+                <div class="right-edge-2">
+                  <p class="no-ind">по убыванию?
+                    <input type="checkbox" name="ack1" value="ack1">
+                  </p>
+                  <p class="no-ind">по убыванию?
+                    <input type="checkbox" name="ack1" value="ack1">
+                  </p>
+                  <p class="no-ind">по убыванию?
+                    <input type="checkbox" name="ack1" value="ack1">
+                  </p>
+                </div>
+                <button id="butt-sort">Построить </button>
+              </div>
+            </div>
+          </div>
+          <div class="block-graf">
+            <p>График:</p>
+            <div id="graf-container">
+              <div class="curr-graff"></div>
+            </div>
+          </div>
+        </details>
+        <p class="text-001">Таблица</p>
+        <!--.f50px-spase
+        p
+        
+        -->
+        <div id="bad-news"> 
+          <p>Записей по данному запросу не найдено :(</p>
+        </div>
+        <div id="table-container">
+          <table id="my-table">
+            <tr class="title">
+              <td>ФИО Клиента</td>
+              <td>Всего потрачено</td>
+              <td>Всего часов записи</td>
+              <td>Предпочитаемый микрофон</td>
+              <td>Год рождения</td>
+            </tr>
+            <tr>
+              <td>Алексеев В.В.</td>
+              <td>5000</td>
+              <td>100.00</td>
+              <td>Neumann 7Ba</td>
+              <td>1997</td>
+            </tr>
+            <tr>
+              <td>Фадеев М.С.</td>
+              <td>7800</td>
+              <td>400.00</td>
+              <td>Rode nt1a</td>
+              <td>2009</td>
+            </tr>
+            <tr>
+              <td>Билан Д.А.</td>
+              <td>8600</td>
+              <td>222.30</td>
+              <td>Sony Ay4</td>
+              <td>1999</td>
+            </tr>
+            <tr>
+              <td>Шуфутин М.В.</td>
+              <td>2890</td>
+              <td>30.45</td>
+              <td>Rode nt1a</td>
+              <td>1889</td>
+            </tr>
+            <tr>
+              <td>Киреев А.С.</td>
+              <td>10000</td>
+              <td>10.00</td>
+              <td>Sony AI400</td>
+              <td>1922</td>
+            </tr>
+            <tr>
+              <td>Нифедов М.А.</td>
+              <td>15300</td>
+              <td>52.23</td>
+              <td>Rode nt1a</td>
+              <td>1987</td>
+            </tr>
+            <tr>
+              <td>Иванова А.М.</td>
+              <td>1000</td>
+              <td>80.90</td>
+              <td>СОЮЗ А7</td>
+              <td>2001</td>
+            </tr>
+            <tr>
+              <td>Вилюсов Ч.К.</td>
+              <td>1430</td>
+              <td>30.96</td>
+              <td>Sony AI400</td>
+              <td>2003</td>
+            </tr>
+            <tr>
+              <td>Корнилов С.А.</td>
+              <td>13700</td>
+              <td>10.00</td>
+              <td>Rode nt1a</td>
+              <td>1999</td>
+            </tr>
+            <tr>
+              <td>Гаусов Т.Н.</td>
+              <td>1118</td>
+              <td>20.20</td>
+              <td>Rode nt1a</td>
+              <td>2001</td>
+            </tr>
+            <tr>
+              <td>Мияги М.С.</td>
+              <td>11780</td>
+              <td>95.13</td>
+              <td>Sony AI400</td>
+              <td>1997</td>
+            </tr>
+            <tr>
+              <td>Николаев Б.Б.</td>
+              <td>1029</td>
+              <td>73.54</td>
+              <td>Rode nt1a</td>
+              <td>1992</td>
+            </tr>
+            <tr>
+              <td>Викторов А. Б.</td>
+              <td>9869</td>
+              <td>47.71</td>
+              <td>Sony AI400</td>
+              <td>1998</td>
+            </tr>
+            <tr>
+              <td>Ха С. Б.</td>
+              <td>9395</td>
+              <td>20.08</td>
+              <td>Rode nt1a</td>
+              <td>1998</td>
+            </tr>
+            <tr>
+              <td>Никитин М. Ч.</td>
+              <td>8500</td>
+              <td>58.08</td>
+              <td>Rode nt1a</td>
+              <td>1997</td>
+            </tr>
+            <tr>
+              <td>Наприенко В.Ч.</td>
+              <td>8300</td>
+              <td>100.99</td>
+              <td>Rode nt1a</td>
+              <td>2002</td>
+            </tr>
+            <tr>
+              <td>Савельев Т. С.</td>
+              <td>500</td>
+              <td>70.10</td>
+              <td>Neumann 7Ba</td>
+              <td>2004</td>
+            </tr>
+            <tr>
+              <td>Кулеба М. В.</td>
+              <td>1000</td>
+              <td>150.17</td>
+              <td>Sony AI400</td>
+              <td>2000</td>
+            </tr>
+            <tr>
+              <td>Колесникова Д. М.</td>
+              <td>1100</td>
+              <td>10.78</td>
+              <td>Sony AI400</td>
+              <td>1996</td>
+            </tr>
+            <tr>
+              <td>Евгеньев А.В</td>
+              <td>10000</td>
+              <td>300.84</td>
+              <td>Sony AI400</td>
+              <td>1954</td>
+            </tr>
+            <tr>
+              <td>Панасенков А.Б</td>
+              <td>7020</td>
+              <td>0.50</td>
+              <td>Sony AI400</td>
+              <td>1997</td>
+            </tr>
+            <tr>
+              <td>Викоторов В.В.</td>
+              <td>70120</td>
+              <td>5.91</td>
+              <td>Sony AI400</td>
+              <td>1999</td>
+            </tr>
+            <tr>
+              <td>Алексеев А.Б.</td>
+              <td>67400</td>
+              <td>9.46</td>
+              <td>Sony AI400</td>
+              <td>1997</td>
+            </tr>
+            <tr>
+              <td>Ваяй В.В.</td>
+              <td>6700</td>
+              <td>7.23</td>
+              <td>Rode nt1a</td>
+              <td>1998</td>
+            </tr>
+            <tr>
+              <td>Алем В.Ч.</td>
+              <td>9100</td>
+              <td>9.86</td>
+              <td>Neumann 7Ba</td>
+              <td>1989</td>
+            </tr>
+            <tr>
+              <td>Сабонов В.Б.</td>
+              <td>25000</td>
+              <td>53.20</td>
+              <td>Neumann 7Ba</td>
+              <td>1995</td>
+            </tr>
+            <tr>
+              <td>Мельник Б.Б.</td>
+              <td>450</td>
+              <td>54.00</td>
+              <td>Sony AI400</td>
+              <td>1975</td>
+            </tr>
+            <tr>
+              <td>Сюй М.С.</td>
+              <td>6000</td>
+              <td>85.00</td>
+              <td>СОЮЗ А7</td>
+              <td>2000</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/main.js"></script>
+  </div>
+  <footer> 
+    <!--script(src="http://d3js.org/d3.v7.js")-->
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="js/js-3.js"></script>
+    <script src="js/js-3-diagramm.js"></script>
+  </footer>
+</html>

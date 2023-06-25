@@ -1,0 +1,156 @@
+extends template
+
+mixin my-option
+  select
+    option(value='0') --- Нет ---
+    option(value='1') ФИО Клиента
+    option(value='2') Всего потрачено
+    option(value='3') Всего часов записи
+    option(value='4') Предпочитаемый микрофон
+    option(value='5') Год рождения
+
+block title
+  link(rel="stylesheet", href= 'css/main_page_2.css')
+
+mixin table-create(a, b, c, d, e)
+  tr
+    td=a
+    td=b
+    td=c
+    td=d
+    td=e
+
+block footer 
+  //script(src="http://d3js.org/d3.v7.js")
+  script(src="https://d3js.org/d3.v5.min.js")
+  script(src='js/js-3.js')
+  script(src='js/js-3-diagramm.js')
+  
+
+block content
+  .my-content
+    details(open)
+      summary.text-002 Настройки показа
+      .main-block
+        .block-01
+          .table 
+            .title-1-1
+              p График:
+            .left-edge-1
+              p.title-1 Значение по оси OХ: 
+              div
+                input#inp2-1(type='radio', name='ox', value='жанр', checked)
+                p Предпочитаемый микрофон
+              div
+                input#inp2-2(type='radio', name='ox', value='жанр')
+                p Год рождения   
+            .right-edge-1
+              p.title-1 Результат: 
+              div
+                input#in-1(type='radio', name='result', value='колво', checked)       
+                p Всего часов записи        
+              div   
+                input#in-2(type='radio', name='result', value='макс')    
+                p Всего потрачено             
+            button#butt-graf Построить 
+        .block-02
+          .table.class_01 
+            .title-1-1
+              p Фильтр:
+            .left-edge-1
+              p ФИО Клиента:
+              p Предпочитаемый микрофон:
+              p Год рождения:
+              p Всего потрачено (от):	
+              p Всего потрачено (до):	
+              p Всего часов записи (от):	
+              p Всего часов записи (до):
+            .right-edge-1
+              p
+                input#name(type='text', placeholder='Введите название')
+              p
+                input#name(type='text', placeholder='Введите название')
+              p
+                input#name(type='text', placeholder='Введите год')
+              p
+                input#name(type='text', placeholder='Введите число')
+              p
+                input#name(type='text', placeholder='Введите число')
+              p
+                input#name(type='text', placeholder='Введите число')
+              p
+                input#name(type='text', placeholder='Введите число')
+            button#butt-filter Найти 
+        .block-03
+          .table-2
+            .title-1-2
+              p Сортировка:
+            .left-edge-2
+              p Первый уровень
+              p Второй уровень 
+              p Третий уровень
+            .center-edge-2#sort-opt 
+              p.l1
+                +my-option
+              p.l2
+                +my-option
+              p.l3
+                +my-option
+            .right-edge-2
+              p.no-ind по убыванию?
+                input(type='checkbox', name='ack1', value='ack1')
+              p.no-ind по убыванию?
+                input(type='checkbox', name='ack1', value='ack1')
+              p.no-ind по убыванию?
+                input(type='checkbox', name='ack1', value='ack1')
+            button#butt-sort Построить 
+      div.block-graf
+        p График:
+        div#graf-container
+          div.curr-graff
+      
+    p.text-001 Таблица
+
+    //.f50px-spase
+      p
+
+    #bad-news 
+      p Записей по данному запросу не найдено :(
+
+    #table-container
+      table#my-table
+        tr.title
+          td ФИО Клиента
+          td Всего потрачено
+          td Всего часов записи
+          td Предпочитаемый микрофон
+          td Год рождения
+
+        +table-create('Алексеев В.В.', '5000', '100.00', 'Neumann 7Ba', '1997')
+        +table-create('Фадеев М.С.', '7800', '400.00', 'Rode nt1a', '2009')
+        +table-create('Билан Д.А.', '8600', '222.30', 'Sony Ay4', '1999')
+        +table-create('Шуфутин М.В.', '2890', '30.45', 'Rode nt1a', '1889')
+        +table-create('Киреев А.С.', '10000', '10.00', 'Sony AI400', '1922')
+        +table-create('Нифедов М.А.', '15300', '52.23', 'Rode nt1a', '1987')
+        +table-create('Иванова А.М.', '1000', '80.90', 'СОЮЗ А7', '2001')
+        +table-create('Вилюсов Ч.К.', '1430', '30.96', 'Sony AI400', '2003')
+        +table-create('Корнилов С.А.', '13700', '10.00', 'Rode nt1a', '1999')
+        +table-create('Гаусов Т.Н.', '1118', '20.20', 'Rode nt1a', '2001')
+        +table-create('Мияги М.С.', '11780', '95.13', 'Sony AI400', '1997')
+        +table-create('Николаев Б.Б.', '1029', '73.54', 'Rode nt1a', '1992')
+        +table-create('Викторов А. Б.', '9869', '47.71', 'Sony AI400', '1998')
+        +table-create('Ха С. Б.', '9395', '20.08', 'Rode nt1a', '1998')
+        +table-create('Никитин М. Ч.', '8500', '58.08', 'Rode nt1a', '1997')
+        +table-create('Наприенко В.Ч.', '8300', '100.99', 'Rode nt1a', '2002')
+        +table-create('Савельев Т. С.', '500', '70.10', 'Neumann 7Ba', '2004')
+        +table-create('Кулеба М. В.', '1000', '150.17', 'Sony AI400', '2000')
+        +table-create('Колесникова Д. М.', '1100', '10.78', 'Sony AI400', '1996')
+        +table-create('Евгеньев А.В', '10000', '300.84', 'Sony AI400', '1954')
+        +table-create('Панасенков А.Б', '7020', '0.50', 'Sony AI400', '1997')
+        +table-create('Викоторов В.В.', '70120', '5.91', 'Sony AI400', '1999')
+        +table-create('Алексеев А.Б.', '67400', '9.46', 'Sony AI400', '1997')
+        +table-create('Ваяй В.В.', '6700', '7.23', 'Rode nt1a', '1998')
+        +table-create('Алем В.Ч.', '9100', '9.86', 'Neumann 7Ba', '1989')
+        +table-create('Сабонов В.Б.', '25000', '53.20', 'Neumann 7Ba', '1995')
+        +table-create('Мельник Б.Б.', '450', '54.00', 'Sony AI400', '1975')
+        +table-create('Сюй М.С.', '6000', '85.00', 'СОЮЗ А7', '2000')
